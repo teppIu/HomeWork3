@@ -28,113 +28,66 @@ class ViewController: UIViewController {
         
         setupColoredView()
         
-        setupRedSlider()
-        setupGreenSlider()
-        setupBlueSlider()
+        setupSlider(slider: redSlider, color: .red)
+        setupSlider(slider: greenSlider, color: .green)
+        setupSlider(slider: blueSlider, color: .blue)
         
-        setupRedLabel()
-        setupGreenLabel()
-        setupBlueLabel()
+        setupLabel(label: redLabel, with: "Red")
+        setupLabel(label: greenLabel, with: "Green")
+        setupLabel(label: blueLabel, with: "Blue")
         
-        setupRedColorValueLabel()
-        setupGreenColorValueLabel()
-        setupBlueColorValueLabel()
+        setupColorValueLabel(colorValueLabel: redColorValueLabel, value: String(redSlider.value))
+        setupColorValueLabel(colorValueLabel: greenColorValueLabel, value: String(greenSlider.value))
+        setupColorValueLabel(colorValueLabel: blueColorValueLabel, value: String(blueSlider.value))
+
     }
 
    // MARK: - setting up sliders
     
     @IBAction func redSliderAction() {
-        redColorValueLabel.text = String(round(100 * redSlider.value)/100)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                              green: CGFloat(greenSlider.value),
-                                              blue: CGFloat(blueSlider.value), alpha: 1)
+        setupSliderAction(valueLabel: redColorValueLabel, slider: redSlider)
     }
     
     @IBAction func greenSliderAction() {
-        greenColorValueLabel.text = String(round(100 * greenSlider.value) / 100)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                              green: CGFloat(greenSlider.value),
-                                              blue: CGFloat(blueSlider.value), alpha: 1)
+        setupSliderAction(valueLabel: greenColorValueLabel, slider: greenSlider)
     }
     
     @IBAction func blueSliderAction() {
-        blueColorValueLabel.text = String(round(100 * blueSlider.value) / 100)
+        setupSliderAction(valueLabel: blueColorValueLabel, slider: blueSlider)
+    }
+    
+    // MARK: - private methods
+    
+    private func setupSliderAction(valueLabel: UILabel!, slider: UISlider!) {
+        valueLabel.text = String(round(100 * slider.value) / 100)
         coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                               green: CGFloat(greenSlider.value),
                                               blue: CGFloat(blueSlider.value), alpha: 1)
     }
-    
-        // MARK: - parameters of view
-    
     
     private func setupColoredView() {
         coloredView.layer.cornerRadius = 10
     }
     
-    // MARK: - parameters of color labels
     
-    private func setupRedLabel() {
-        redLabel.text = "Red"
-        redLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        redLabel.textAlignment = .center
+    private func setupLabel(label: UILabel!, with title: String) {
+        label.text = title
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.textAlignment = .center
+    }
+
+    
+    private func setupColorValueLabel(colorValueLabel: UILabel!, value: String) {
+        colorValueLabel.text = value
+        colorValueLabel.font = redColorValueLabel.font.withSize(15)
+        colorValueLabel.textAlignment = .right
     }
     
-    private func setupGreenLabel() {
-        greenLabel.text = "Green"
-        greenLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        greenLabel.textAlignment = .center
-    }
     
-    private func setupBlueLabel() {
-        blueLabel.text = "Blue"
-        blueLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        blueLabel.textAlignment = .center
-    }
-    
-    // MARK: - parameters of labels responsible for the value
-    
-    private func setupRedColorValueLabel() {
-        redColorValueLabel.text = String(redSlider.value)
-        redColorValueLabel.font = redColorValueLabel.font.withSize(15)
-        redColorValueLabel.textAlignment = .right
-    }
-    
-    private func setupGreenColorValueLabel() {
-        greenColorValueLabel.text = String(greenSlider.value)
-        greenColorValueLabel.font = greenColorValueLabel.font.withSize(15)
-        greenColorValueLabel.textAlignment = .right
-    }
-    
-    private func setupBlueColorValueLabel() {
-        blueColorValueLabel.text = String(blueSlider.value)
-        blueColorValueLabel.font = blueColorValueLabel.font.withSize(15)
-        blueColorValueLabel.textAlignment = .right
-    }
-    
-    //MARK: - parameters of sliders
-    
-    private func setupRedSlider() {
-        redSlider.value = 0
-        redSlider.maximumValue = 0
-        redSlider.maximumValue = 1
-        redSlider.minimumTrackTintColor = .red
-        redSlider.thumbTintColor = .red
-    }
-    
-    private func setupGreenSlider() {
-        greenSlider.value = 0
-        greenSlider.maximumValue = 0
-        greenSlider.maximumValue = 1
-        greenSlider.minimumTrackTintColor = .green
-        greenSlider.thumbTintColor = .green
-    }
-    
-    private func setupBlueSlider() {
-        blueSlider.value = 0
-        blueSlider.maximumValue = 0
-        blueSlider.maximumValue = 1
-        blueSlider.minimumTrackTintColor = .blue
-        blueSlider.thumbTintColor = .blue
+    private func setupSlider(slider: UISlider!, color: UIColor) {
+        slider.value = 0
+        slider.minimumTrackTintColor = color
+        slider.thumbTintColor = color
     }
 }
 
