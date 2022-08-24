@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		7ED28C24289D59E000BC90EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED28C23289D59E000BC90EC /* AppDelegate.swift */; };
 		7ED28C26289D59E000BC90EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED28C25289D59E000BC90EC /* SceneDelegate.swift */; };
-		7ED28C28289D59E000BC90EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED28C27289D59E000BC90EC /* ViewController.swift */; };
+		7ED28C28289D59E000BC90EC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED28C27289D59E000BC90EC /* SettingViewController.swift */; };
 		7ED28C2B289D59E000BC90EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED28C29289D59E000BC90EC /* Main.storyboard */; };
 		7ED28C2D289D59E100BC90EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED28C2C289D59E100BC90EC /* Assets.xcassets */; };
 		7ED28C30289D59E100BC90EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED28C2E289D59E100BC90EC /* LaunchScreen.storyboard */; };
+		7EFB81BE28B4AA0E00C89C96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB81BD28B4AA0E00C89C96 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7ED28C20289D59E000BC90EC /* HomeWork3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED28C23289D59E000BC90EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ED28C25289D59E000BC90EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7ED28C27289D59E000BC90EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7ED28C27289D59E000BC90EC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7ED28C2A289D59E000BC90EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ED28C2C289D59E100BC90EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED28C2F289D59E100BC90EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ED28C31289D59E100BC90EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFB81BD28B4AA0E00C89C96 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				7ED28C23289D59E000BC90EC /* AppDelegate.swift */,
 				7ED28C25289D59E000BC90EC /* SceneDelegate.swift */,
-				7ED28C27289D59E000BC90EC /* ViewController.swift */,
+				7ED28C27289D59E000BC90EC /* SettingViewController.swift */,
+				7EFB81BD28B4AA0E00C89C96 /* MainViewController.swift */,
 				7ED28C29289D59E000BC90EC /* Main.storyboard */,
 				7ED28C2C289D59E100BC90EC /* Assets.xcassets */,
 				7ED28C2E289D59E100BC90EC /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ED28C28289D59E000BC90EC /* ViewController.swift in Sources */,
+				7ED28C28289D59E000BC90EC /* SettingViewController.swift in Sources */,
 				7ED28C24289D59E000BC90EC /* AppDelegate.swift in Sources */,
 				7ED28C26289D59E000BC90EC /* SceneDelegate.swift in Sources */,
+				7EFB81BE28B4AA0E00C89C96 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +291,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66SPJZCUBP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWork3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hw3;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -314,8 +320,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66SPJZCUBP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWork3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hw3;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
